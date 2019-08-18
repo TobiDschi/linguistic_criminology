@@ -1,0 +1,95 @@
+H1:
+
+Call:
+lm(formula = Emotive_Value ~ timeelapsed * Emotion * event + 
+    hashtag, data = comparison_data)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.1976 -0.1571  0.0056  0.1634  2.7025 
+
+Coefficients:
+                                      Estimate Std. Error  t value Pr(>|t|)    
+(Intercept)                          5.257e+00  1.626e-03 3232.614  < 2e-16 ***
+timeelapsed                         -2.077e-05  2.184e-06   -9.513  < 2e-16 ***
+EmotionValence                       1.680e-01  2.293e-03   73.262  < 2e-16 ***
+eventchd                             4.040e-02  8.140e-03    4.963 6.93e-07 ***
+eventnic                             9.241e-02  1.834e-02    5.038 4.71e-07 ***
+hashtag#CharlieHebdo                 5.369e-02  7.413e-03    7.243 4.40e-13 ***
+hashtag#JeSuisCharlie                6.690e-02  7.994e-03    8.370  < 2e-16 ***
+hashtag#Niza                         2.522e-02  1.826e-02    1.381 0.167144    
+hashtag#PrayForBarcelona            -1.269e-02  4.936e-03   -2.571 0.010130 *  
+hashtag#PrayForNice                  8.515e-02  1.840e-02    4.628 3.68e-06 ***
+hashtag#StopIslam                    9.970e-02  6.418e-03   15.536  < 2e-16 ***
+timeelapsed:EmotionValence           5.352e-05  3.088e-06   17.333  < 2e-16 ***
+timeelapsed:eventchd                -1.909e-05  7.456e-06   -2.560 0.010463 *  
+timeelapsed:eventnic                 3.288e-05  3.425e-06    9.600  < 2e-16 ***
+EmotionValence:eventchd             -1.663e-02  4.886e-03   -3.404 0.000665 ***
+EmotionValence:eventnic             -9.457e-02  3.299e-03  -28.670  < 2e-16 ***
+timeelapsed:EmotionValence:eventchd  1.348e-05  1.037e-05    1.301 0.193383    
+timeelapsed:EmotionValence:eventnic -6.968e-05  4.843e-06  -14.387  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.2645 on 336376 degrees of freedom
+  (566 observations deleted due to missingness)
+Multiple R-squared:  0.1067,	Adjusted R-squared:  0.1067 
+F-statistic:  2364 on 17 and 336376 DF,  p-value: < 2.2e-16
+
+H2:
+
+Call:
+lm(formula = Emotive_Value ~ support * Emotion, data = comparison_data)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.2136 -0.1588  0.0038  0.1633  2.6864 
+
+Coefficients:
+                                                 Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                     5.2976434  0.0006826 7761.28   <2e-16 ***
+supportexpression of solidarity                 0.1331645  0.0026760   49.76   <2e-16 ***
+support#StopIslam                               0.2328004  0.0042935   54.22   <2e-16 ***
+EmotionValence                                  0.1659197  0.0009653  171.88   <2e-16 ***
+supportexpression of solidarity:EmotionValence -0.1423996  0.0037845  -37.63   <2e-16 ***
+support#StopIslam:EmotionValence               -0.2986601  0.0060719  -49.19   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.2675 on 336388 degrees of freedom
+  (566 observations deleted due to missingness)
+Multiple R-squared:  0.08645,	Adjusted R-squared:  0.08644 
+F-statistic:  6367 on 5 and 336388 DF,  p-value: < 2.2e-16
+
+H3: 
+
+Call:
+lm(formula = Emotive_Value ~ hashtag * Emotion, data = comparison_data)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.2071 -0.1556  0.0056  0.1614  2.6929 
+
+Coefficients:
+                                          Estimate Std. Error  t value Pr(>|t|)    
+(Intercept)                              5.2408435  0.0009504 5514.409  < 2e-16 ***
+hashtag#CharlieHebdo                     0.0835156  0.0018923   44.134  < 2e-16 ***
+hashtag#JeSuisCharlie                    0.0534996  0.0047439   11.277  < 2e-16 ***
+hashtag#Niza                             0.1277829  0.0014983   85.285  < 2e-16 ***
+hashtag#PrayForBarcelona                 0.0618378  0.0069317    8.921  < 2e-16 ***
+hashtag#PrayForNice                      0.2933454  0.0035136   83.488  < 2e-16 ***
+hashtag#StopIslam                        0.2896003  0.0042696   67.829  < 2e-16 ***
+EmotionValence                           0.2067192  0.0013441  153.803  < 2e-16 ***
+hashtag#CharlieHebdo:EmotionValence     -0.0072135  0.0026762   -2.695  0.00703 ** 
+hashtag#JeSuisCharlie:EmotionValence     0.0778902  0.0067089   11.610  < 2e-16 ***
+hashtag#Niza:EmotionValence             -0.1182302  0.0021189  -55.798  < 2e-16 ***
+hashtag#PrayForBarcelona:EmotionValence -0.1488304  0.0098030  -15.182  < 2e-16 ***
+hashtag#PrayForNice:EmotionValence      -0.3298381  0.0049690  -66.379  < 2e-16 ***
+hashtag#StopIslam:EmotionValence        -0.3394596  0.0060381  -56.220  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.2626 on 336380 degrees of freedom
+  (566 observations deleted due to missingness)
+Multiple R-squared:  0.1191,	Adjusted R-squared:  0.1191 
+F-statistic:  3499 on 13 and 336380 DF,  p-value: < 2.2e-16
