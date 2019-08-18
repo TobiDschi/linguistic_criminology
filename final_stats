@@ -36,6 +36,22 @@ Residual standard error: 0.2645 on 336376 degrees of freedom
 Multiple R-squared:  0.1067,	Adjusted R-squared:  0.1067 
 F-statistic:  2364 on 17 and 336376 DF,  p-value: < 2.2e-16
 
+Analysis of Variance Table
+
+Response: Emotive_Value
+                              Df  Sum Sq Mean Sq    F value Pr(>F)    
+timeelapsed                    1    12.9   12.93   184.7936 <2e-16 ***
+Emotion                        1  1887.3 1887.31 26982.0510 <2e-16 ***
+event                          2   500.9  250.46  3580.7557 <2e-16 ***
+hashtag                        6    68.1   11.35   162.2486 <2e-16 ***
+timeelapsed:Emotion            1    23.4   23.38   334.3054 <2e-16 ***
+timeelapsed:event              2     0.4    0.19     2.7304 0.0652 .  
+Emotion:event                  2   302.3  151.15  2160.9481 <2e-16 ***
+timeelapsed:Emotion:event      2    15.7    7.83   111.9261 <2e-16 ***
+Residuals                 336376 23528.5    0.07                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
 H2:
 
 Call:
@@ -60,6 +76,18 @@ Residual standard error: 0.2675 on 336388 degrees of freedom
   (566 observations deleted due to missingness)
 Multiple R-squared:  0.08645,	Adjusted R-squared:  0.08644 
 F-statistic:  6367 on 5 and 336388 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: Emotive_Value
+                    Df  Sum Sq Mean Sq  F value    Pr(>F)    
+support              2   125.8   62.88   879.07 < 2.2e-16 ***
+Emotion              1  1887.3 1887.31 26384.34 < 2.2e-16 ***
+support:Emotion      2   264.0  132.02  1845.58 < 2.2e-16 ***
+Residuals       336388 24062.4    0.07                       
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
 
 H3: 
 
@@ -93,3 +121,14 @@ Residual standard error: 0.2626 on 336380 degrees of freedom
   (566 observations deleted due to missingness)
 Multiple R-squared:  0.1191,	Adjusted R-squared:  0.1191 
 F-statistic:  3499 on 13 and 336380 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: Emotive_Value
+                    Df  Sum Sq Mean Sq F value    Pr(>F)    
+hashtag              6   579.8   96.64  1401.1 < 2.2e-16 ***
+Emotion              1  1887.3 1887.31 27362.5 < 2.2e-16 ***
+hashtag:Emotion      6   670.7  111.79  1620.7 < 2.2e-16 ***
+Residuals       336380 23201.6    0.07                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
